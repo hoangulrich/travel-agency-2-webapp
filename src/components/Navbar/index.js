@@ -1,12 +1,13 @@
 import React from "react";
-import { Nav, NavLink, Bars, NavMenu, NavBtn } from "./NavbarElements";
+import { Nav, NavLink, Bars, NavMenu, NavBtn, Logo } from "./NavbarElements";
 import { menuData } from "../../Data/MenuData";
+import { Button } from "../Global/Button";
 
 const Navbar = () => {
   return (
     <>
       <Nav>
-        <NavLink to="/">Trippy</NavLink>
+        <Logo to="/">TRIPPY</Logo>
         <Bars />
         <NavMenu>
           {menuData.map((item, index) => (
@@ -15,7 +16,11 @@ const Navbar = () => {
             </NavLink>
           ))}
         </NavMenu>
-        <NavBtn>Explore</NavBtn>
+        <NavBtn>
+          <Button primary round to="/trips">
+            Book a Flight
+          </Button>
+        </NavBtn>
       </Nav>
     </>
   );
