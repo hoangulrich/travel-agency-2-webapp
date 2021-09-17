@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const TripsContainer = styled.div`
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: 5rem calc((100vw - 1300px) / 2);
   color: #fff;
   /* background: red; */
@@ -23,6 +23,7 @@ export const TripsWrapper = styled.div`
 
   @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;
+    grid-gap: 17px;
   }
 
   @media screen and (max-width: 868px) {
@@ -41,11 +42,12 @@ export const TripsCard = styled.div`
 
 export const TripsImg = styled.img`
   height: 100%;
-  max-width: 100%;
+  width: 100%;
   position: relative;
   border-radius: 10px;
   filter: brightness(70%);
   transition: 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  object-fit: cover;
 
   &:hover {
     filter: brightness(100%);

@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../Global/Button";
+import { AbsoluteButton } from "../Global/Button";
 import {
   TripsContainer,
   TripsWrapper,
@@ -17,7 +17,7 @@ const Trips = () => {
   return (
     <>
       <TripsContainer>
-        <TripsHeading>Heading</TripsHeading>
+        <TripsHeading>Our Favorite Destinations</TripsHeading>
         <TripsWrapper>
           {TripsData.map((trip) => (
             <TripsCard>
@@ -27,18 +27,9 @@ const Trips = () => {
                   <ImLocation />
                   <TripsTitle>{trip.title}</TripsTitle>
                 </TextWrap>
-                <Button
-                  to="/trips"
-                  primary="true"
-                  round="true"
-                  css={`
-                    position: absolute;
-                    top: 420px;
-                    font-size: 14px;
-                  `}
-                >
+                <AbsoluteButton to="/trips" primary="true" round="true">
                   {trip.buttonLabel}
-                </Button>
+                </AbsoluteButton>
               </TripsInfo>
             </TripsCard>
           ))}

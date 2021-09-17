@@ -20,3 +20,9 @@ export const Button = styled(Link)`
     transform: translateY(-2px);
   }
 `;
+
+export const AbsoluteButton = styled(Button)`
+  position: absolute;
+  top: 420px;
+  font-size: 14px;
+`;
