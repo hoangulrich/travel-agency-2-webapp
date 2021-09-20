@@ -26,3 +26,17 @@ export const AbsoluteButton = styled(Button)`
   top: 420px;
   font-size: 14px;
 `;
+
+export const EmailButton = styled(Button)`
+  height: 48px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    min-width: 350px;
+  }
+
+  @media screen and (max-width: 400px) {
+    width: 100%;
+    min-width: 250px;
+  }
+`;
